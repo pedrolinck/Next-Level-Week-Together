@@ -24,7 +24,7 @@ window.addEventListener('scroll', function(){
   if(window.scrollY >= navHeight){
     header.classList.add('scroll')
   }else{
-    header.classList.remove('scroll')
+    header.classList.remove('scroll') 
   }
 } )
 
@@ -54,6 +54,20 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials .title, #testimonial .cards
-  #constact .title, #contact .grid`, { interval: 120}
+  #constact .title, #contact .grid, footer .brand, footer .social`,
+  { interval: 120}
   
   )
+
+  // ============== Back Button =============
+
+  const backButton = document.querySelector('.back-to-top')
+
+  window.addEventListener('scroll', function(){
+
+    if(window.scrollY >= 560){
+      backButton.classList.add('show')
+    }else{
+      backButton.classList.remove('show')
+    }
+  })
